@@ -113,6 +113,7 @@ button:active {
 .error {
   color: hsl(4, 100%, 67%);
   float: right;
+  visibility: hidden;
 }
 
 .success-message {
@@ -125,12 +126,16 @@ button:active {
   flex-direction: column;
   margin-top: 20dvh;
 }
+.success-message.hide {
+  display: none;
+}
 .success-message img {
   max-width: 60px;
 }
 .success-message p {
   margin-top: 20px;
   font-size: 16px;
+  line-height: 1.5em;
 }
 .success-message h2 {
   margin-top: 40px;
@@ -141,7 +146,9 @@ button:active {
   margin-top: auto;
   margin-bottom: 40px;
 }
-
+span {
+  font-weight: 700;
+}
 @media only screen and (min-width: 700px) {
   .header img {
     display: none;

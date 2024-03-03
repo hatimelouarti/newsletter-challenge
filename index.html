@@ -22,7 +22,7 @@
     </title>
   </head>
   <body>
-    <div class="all hide">
+    <div class="all">
       <div class="header">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
       </div>
@@ -30,7 +30,7 @@
         <div class="desktopimg">
           <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
         </div>
-        <div class="cardcontent hide">
+        <div class="cardcontent">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
@@ -46,7 +46,7 @@
               </div>
 
               <input
-                class=" "
+                class=""
                 type="email"
                 value="email@company.com"
                 autofocus
@@ -58,14 +58,14 @@
       </div>
     </div>
 
-    <div class="success-message">
+    <div class="success-message hide">
       <img src="./assets/images/icon-success.svg" alt="" />
       <h2>Thanks for subscribing</h2>
       <p>
-        A confirmation email has been sent to <span>fef@gmail.com</span>.Please
-        open it and click the button inside to confirm your subscribtion
+        A confirmation email has been sent to <span>${email}</span>.Please open
+        it and click the button inside to confirm your subscribtion
       </p>
-      <button>Subscribe to monthly newsletter</button>
+      <button class="dismiss-button">Dismiss message</button>
     </div>
 
     <div class="attribution">
@@ -75,4 +75,5 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
   </body>
+  <script src="app.js"></script>
 </html>
