@@ -16,171 +16,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      * {
-        margin: 0;
-      }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      body {
-        font-family: "Roboto", sans-serif;
-      }
-      .header img {
-        width: 100%;
-        height: auto;
-      }
-      .desktopimg {
-        display: none;
-        width: 100%;
-        height: auto;
-      }
-      ul {
-        list-style: none outside;
-        font-size: 16px;
-        padding: 0;
-        margin-top: 30px;
-      }
-      li {
-        margin-bottom: 10px;
-        background: url(./assets/images/icon-list.svg) no-repeat;
-        background-position: 0 4px;
-        padding: 5px 0px 5px 35px;
-      }
-      .all {
-        padding: 0px;
-        max-width: 1000px;
-      }
-      h1 {
-        font-size: 40px;
-
-        margin-bottom: 30px;
-      }
-      .attribution {
-        position: fixed;
-        bottom: 0;
-      }
-      input {
-        width: 100%;
-        height: 60px;
-        margin-top: 5px;
-        border: 1px hsl(231, 7%, 60%) solid;
-        border-radius: 10px;
-        color: hsl(231, 7%, 60%);
-        padding: 0 20px 0 20px;
-        box-sizing: border-box;
-        font-size: 16px !important;
-        font-weight: normal !important;
-      }
-
-      input,
-      label {
-        display: block;
-        font-size: 14px;
-        font-weight: 700;
-      }
-      .form {
-        margin-top: 40px;
-      }
-      .cardbody {
-        padding: 30px;
-      }
-      @media only screen and (min-width: 500px) {
-        body {
-          background: hsl(234, 29%, 20%);
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 100vh;
-          align-items: center;
-          justify-items: center; /* adjusted */
-        }
-        main {
-          display: grid;
-        }
-        .all {
-          background: hsl(0, 0%, 100%);
-          width: 100%;
-          padding: 30px;
-        }
-        .header img {
-          display: none;
-        }
-        .desktopimg {
-          display: inline;
-          width: 100%;
-          height: auto;
-        }
-        .desktopimg img {
-          width: 100%;
-          height: auto;
-        }
-      }
-      @media only screen and (min-width: 700px) {
-        body {
-          background: hsl(234, 29%, 20%);
-        }
-        .all {
-          background: none;
-        }
-        .cardbody {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20px; /* Add some gap between the columns */
-          background: white;
-          min-width: 600px;
-          border-radius: 20px;
-        }
-        .desktopimg {
-          order: 2; /* Set the order of desktopimg to 1 to place it on the left */
-        }
-        .desktopimg img {
-          width: 100% !important;
-          height: auto !important;
-          max-width: 400px;
-          min-width: 200px;
-          float: right;
-        }
-        .cardcontent {
-          order: 1; /* Set the order of dd to 2 to place it on the right */
-          padding: 50px;
-        }
-        h1 {
-          font-size: 3.5em;
-        }
-        button {
-          background: linear-gradient(
-            90deg,
-            hsl(343, 100%, 67%) 0%,
-            hsl(4, 100%, 71%) 35%,
-            hsl(4, 100%, 67%) 100%
-          );
-          color: white;
-          width: 100%;
-          height: 60px;
-          border-radius: 10px;
-          font-weight: 700;
-          font-size: 14px;
-          margin-top: 20px;
-
-          border: none;
-        }
-        button:active {
-          background: hsl(235, 18%, 26%);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="all">
+    <div class="all hide">
       <div class="header">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" />
       </div>
@@ -188,7 +30,7 @@
         <div class="desktopimg">
           <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
         </div>
-        <div class="cardcontent">
+        <div class="cardcontent hide">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
@@ -198,13 +40,32 @@
           </ul>
           <div class="form">
             <form action="">
-              <label for="email">Email address</label>
-              <input type="email" value="email@company.com" />
+              <div class="labels">
+                <label for="email">Email address</label>
+                <label class="error" for="email">Valid email requierd</label>
+              </div>
+
+              <input
+                class=" "
+                type="email"
+                value="email@company.com"
+                autofocus
+              />
               <button>Subscribe to monthly newsletter</button>
             </form>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="success-message">
+      <img src="./assets/images/icon-success.svg" alt="" />
+      <h2>Thanks for subscribing</h2>
+      <p>
+        A confirmation email has been sent to <span>fef@gmail.com</span>.Please
+        open it and click the button inside to confirm your subscribtion
+      </p>
+      <button>Subscribe to monthly newsletter</button>
     </div>
 
     <div class="attribution">
